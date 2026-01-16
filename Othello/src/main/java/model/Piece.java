@@ -18,9 +18,7 @@ public class Piece {
         this.color = color;
     }
 
-    /**
-     * @return piece color
-     */
+    
     public char getColor() {
         return color;
     }
