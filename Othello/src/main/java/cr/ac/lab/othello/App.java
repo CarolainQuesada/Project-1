@@ -76,6 +76,8 @@ public class App extends Application {
 
         System.out.println("\n--- JUEGO TERMINADO ---");
         board.printBoard();
+        System.out.println(othello.getGameResult());
+
         
          // El launch se deja comentado por si se usa consola
         // launch(args);
