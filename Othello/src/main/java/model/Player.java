@@ -36,4 +36,8 @@ public class Player {
     public char getPieceColor() {
         return pieceColor;
     }
+    @Override
+    public String toString() {
+        return name + " (" + (pieceColor == 'N' ? "Negras" : "Blancas") + ")";
+    }
 }
