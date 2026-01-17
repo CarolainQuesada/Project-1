@@ -98,20 +98,31 @@ public void printBoard() {
     public Node getStart() {
     return start;
 }
+    
     public boolean isValidPosition(int row, int col) {
     return row >= 0 && row < rows &&
            col >= 0 && col < columns;
 }
+   //  If the position is outside the board limits, the method returns null.
+
     public Node getNode(int row, int col) {
+
+    if (!isValidPosition(row, col)) {
+        return null;
+    }
+
     Node current = start;
-    // Bajar hasta la fila deseada
+
     for (int i = 0; i < row; i++) {
+        if (current == null) return null;
         current = current.south;
     }
-    // Moverse a la derecha hasta la columna deseada
+
     for (int j = 0; j < col; j++) {
+        if (current == null) return null;
         current = current.east;
     }
+
     return current;
-    }
+}
 }//
