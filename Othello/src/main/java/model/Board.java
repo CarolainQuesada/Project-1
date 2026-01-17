@@ -72,6 +72,26 @@ public class Board {
         previousRowStart = currentRowStart;
     }   
    }
+    public void printBoard() {
+    Node rowNode = start;
+
+    while (rowNode != null) {
+        Node current = rowNode;
+
+        while (current != null) {
+            if (current.isEmpty()) {
+                System.out.print("[ ] ");
+            } else {
+                System.out.print("[X] ");
+            }
+            current = current.east;
+        }
+
+        System.out.println();
+        rowNode = rowNode.south;
+    }
+}
     public Node getStart() {
     return start;
 }
+}//
