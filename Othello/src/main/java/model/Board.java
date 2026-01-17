@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package model;
 
 /**
@@ -100,6 +97,10 @@ public void printBoard() {
     
     public Node getStart() {
     return start;
+}
+    public boolean isValidPosition(int row, int col) {
+    return row >= 0 && row < rows &&
+           col >= 0 && col < columns;
 }
     public Node getNode(int row, int col) {
     Node current = start;

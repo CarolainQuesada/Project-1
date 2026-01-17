@@ -55,7 +55,7 @@ public class App extends Application {
 
             // PROTECCIÓN: Verifica si la entrada es un número
             if (!sc.hasNextInt()) {
-                System.out.println("Entrada no válida. Por favor use números.");
+                System.out.println("Entrada no valida. Por favor use numeros.");
                 sc.next(); // Limpia la entrada incorrecta (la letra)
                 continue;  // Regresa al inicio del while
             }
