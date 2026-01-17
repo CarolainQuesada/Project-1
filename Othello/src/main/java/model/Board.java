@@ -143,4 +143,13 @@ public class Board {
 
     return current;
 }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int getColumns() {
+        return columns;
+    }
+    
 }//
