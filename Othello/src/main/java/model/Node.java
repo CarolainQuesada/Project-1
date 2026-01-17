@@ -6,8 +6,7 @@ package model;
  * @author Carolain Quesada
  */
 public class Node {
-    private int row;
-    private int column;
+
     private Piece piece;
 
     public Node north;
@@ -19,16 +18,12 @@ public class Node {
     public Node northWest;
     public Node southEast;
     public Node southWest;
+
     /**
      * Creates an empty node with no links.
      */
     public Node() {
         piece = null;
-    }
-
-    public Node(int row, int column) {
-        this.row = row;
-        this.column = column;
     }
 
     /**     *
@@ -52,14 +47,6 @@ public class Node {
      */
     public Piece getPiece() {
         return piece;
-    }
-
-    public int getRow() {
-        return row;
-    }
-
-    public int getColumn() {
-        return column;
     }
 
     /**
