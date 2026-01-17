@@ -8,8 +8,9 @@ import javafx.stage.Stage;
 import model.Board;
 import java.util.Scanner;
 import java.io.IOException;
-import model.Game;
+import controller.Game;
 import model.Player;
+import view.BoardView;  
 
 public class App extends Application {
 
@@ -44,12 +45,12 @@ public class App extends Application {
         // 3. Inicializar el Juego
         Game othello = new Game(board, p1, p2);
         Scanner sc = new Scanner(System.in);
-
+        BoardView view = new BoardView();
         System.out.println("--- Inicio del Juego de Othello ---");
 
         // Ciclo principal protegido
         while (!othello.isGameOver()) {
-            board.printBoard();
+            view.printBoard(board);
             System.out.println("Turno de: " + othello.getCurrentPlayer().getName());
             System.out.print("Ingrese fila y columna (o una letra para salir): ");
 
@@ -75,7 +76,7 @@ public class App extends Application {
         }
 
         System.out.println("\n--- JUEGO TERMINADO ---");
-        board.printBoard();
+        view.printBoard(board);
         System.out.println(othello.getGameResult());
 
         
