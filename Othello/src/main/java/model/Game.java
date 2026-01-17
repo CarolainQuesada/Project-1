@@ -126,4 +126,20 @@ public class Game {
     public Player getCurrentPlayer() {
         return currentPlayer;
     }
+    //contar las piezas para saber quien gana 
+    public int countPieces(char color) {
+    int count = 0;
+
+    for (int r = 0; r < 8; r++) {
+        for (int c = 0; c < 8; c++) {
+            Node n = board.getNode(r, c);
+            if (n != null && !n.isEmpty() &&
+                n.getPiece().getColor() == color) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
 }
