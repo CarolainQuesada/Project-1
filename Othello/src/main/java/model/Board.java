@@ -19,6 +19,59 @@ public class Board {
         buildBoard();
     }
     
+    private void buildBoard(){
+        //Nodo que está justo encima del que vamos a crear.
+        Node previousRowStart= null;
+        //Itera fila por fila.
+        for(int r=0;r<rows;r++){
+            //Nodo anterior en la misma fila (para enlaces horizontales).
+            Node current= null;
+            //Primer nodo de esta fila.
+            Node currentRowStart=null;
+            //Nodo que está justo encima del que vamos a crear.
+            Node upperNode = previousRowStart;
+            //Itera columna por columna.
+           for(int c=0;c<columns;c++){
+               //Crea un nodo con posición lógica.
+               Node newNode = new Node(r,c);
+               //Solo ocurre una vez: define la esquina superior izquierda.
+               if(start==null){
+                   start = newNode;
+               }
+              // Conecta izquierda ↔ derecha.
+               if(current!=null){
+                   current.east= newNode;
+                   newNode.west= current;
+               }
+               //Si es el primero de la fila, lo guardamos.
+               else{
+                   currentRowStart= newNode;
+               }
+               //Conecta arriba ↔ abajo.
+               if(upperNode!=null){
+                   upperNode.south = newNode;
+                   newNode.north = upperNode;
+               
+               //enlaces diagonales
+               if(upperNode.west!=null){
+                   upperNode.west.southEast=newNode;
+                   newNode.northWest = upperNode.west;
+               }
+                //enlaces diagonales
+               if(upperNode.east!=null){
+                   upperNode.east.southWest = newNode;
+                   newNode.northEast = upperNode.east;
+               }
+               //Avanza al siguiente nodo de la fila superior.
+                 upperNode = upperNode.east;
+           }
+            //El nodo actual pasa a ser el anterior.
+           current = newNode;
+        }
+           //Prepara la referencia para la siguiente fila.
+        previousRowStart = currentRowStart;
+    }   
+   }
     public Node getStart() {
     return start;
 }
