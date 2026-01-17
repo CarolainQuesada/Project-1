@@ -22,4 +22,7 @@ public class Piece {
     public char getColor() {
         return color;
     }
+    public void flip() {
+        this.color = (this.color == 'B') ? 'N' : 'B';
+    }
 }
