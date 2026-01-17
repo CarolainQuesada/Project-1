@@ -9,5 +9,16 @@ package model;
  * @author Usuario
  */
 public class Board {
+    private Node start;
+    private int rows;
+    private int columns;
+
+    public Board(int rows, int columns) {
+        this.rows = rows;
+        this.columns = columns;
+        buildBoard();
+    }
     
+    public Node getStart() {
+    return start;
 }
