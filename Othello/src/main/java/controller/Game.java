@@ -1,10 +1,8 @@
 package controller;
-
 import model.Board;
 import model.Node;
 import model.Piece;
 import model.Player;
-
 public class Game {
     private Board board;
     private Player player1;

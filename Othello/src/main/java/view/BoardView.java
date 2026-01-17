@@ -10,47 +10,40 @@ import model.Node;
 
 public class BoardView {
     
-     public void printBoard(Board board) {
-
-    // ===== Imprimir encabezado de columnas =====
-    System.out.print("    ");
-    for (int c = 0; c < board.getColumns(); c++) {
-        System.out.print(c + "   ");
-    }
-    System.out.println();
-
-    System.out.print("  ");
-    for (int i = 0; i < board.getColumns () * 4 + 1; i++) {
-        System.out.print("-");
-    }
+       
+  public void printBoard(Board board) {
+    // 1. Encabezado de LETRAS (arriba)
+   System.out.println("\n     A    B    C    D    E    F    G    H");
+  System.out.print("   ");
+    for (int i = 0; i < 8 * 4 + 1; i++) System.out.print("-");
     System.out.println();
 
     Node rowNode = board.getStart();
-    int rowIndex = 0;
+    int displayRow = 1; // El usuario verá del 1 al 8
 
-    // ===== Imprimir filas =====
+    // 2. Cuerpo del tablero con NÚMEROS a la izquierda
     while (rowNode != null) {
-
-        // Número de fila a la izquierda
-        System.out.print(rowIndex + " | ");
+        System.out.print(displayRow + " | "); // Número de fila (1-8)
 
         Node current = rowNode;
         while (current != null) {
-
-            if (current.getPiece() == null) {
-                System.out.print("[ ] ");
+            if (current.isEmpty()) {
+              System.out.print("[ ]  ");
+                     
             } else {
-                char color = current.getPiece().getColor();
-                System.out.print("[" + color + "] ");
+                char simbolo = (current.getPiece().getColor() == 'N') ? 'X' : 'O';
+             System.out.print("[" + simbolo + "]  ");
             }
-
             current = current.east;
         }
 
-        System.out.println();
+        System.out.println("|");
         rowNode = rowNode.south;
-        rowIndex++;
+        displayRow++;
     }
+    System.out.print("   ");
+    for (int i = 0; i < 8 * 4 + 1; i++) System.out.print("-");
+    System.out.println();
 }
 
-    }
+ }

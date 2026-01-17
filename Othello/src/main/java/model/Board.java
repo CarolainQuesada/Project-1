@@ -69,49 +69,6 @@ public class Board {
         previousRowStart = currentRowStart;
     }   
    }
-   public void printBoard() {
-
-    // ===== Imprimir encabezado de columnas =====
-    System.out.print("    ");
-    for (int c = 0; c < columns; c++) {
-        System.out.print(c + "   ");
-    }
-    System.out.println();
-
-    System.out.print("  ");
-    for (int i = 0; i < columns * 4 + 1; i++) {
-        System.out.print("-");
-    }
-    System.out.println();
-
-    Node rowNode = start;
-    int rowIndex = 0;
-
-    // ===== Imprimir filas =====
-    while (rowNode != null) {
-
-        // Número de fila a la izquierda
-        System.out.print(rowIndex + " | ");
-
-        Node current = rowNode;
-        while (current != null) {
-
-            if (current.getPiece() == null) {
-                System.out.print("[ ] ");
-            } else {
-                char color = current.getPiece().getColor();
-                System.out.print("[" + color + "] ");
-            }
-
-            current = current.east;
-        }
-
-        System.out.println();
-        rowNode = rowNode.south;
-        rowIndex++;
-    }
-}
-
     
     public Node getStart() {
     return start;
