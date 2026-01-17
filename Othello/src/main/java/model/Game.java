@@ -141,5 +141,18 @@ public class Game {
     }
     return count;
 }
+    //definir el ganador 
+public String getGameResult() {
+    int blackCount = countPieces('N');
+    int whiteCount = countPieces('B');
+
+    if (blackCount > whiteCount) {
+        return player1.getName() + " gana (" + blackCount + " vs " + whiteCount + ")";
+    } else if (whiteCount > blackCount) {
+        return player2.getName() + " gana (" + whiteCount + " vs " + blackCount + ")";
+    } else {
+        return "Empate (" + blackCount + " vs " + whiteCount + ")";
+    }
+}
 
 }
