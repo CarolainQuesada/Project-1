@@ -94,4 +94,16 @@ public class Board {
     public Node getStart() {
     return start;
 }
+    public Node getNode(int row, int col) {
+    Node current = start;
+    // Bajar hasta la fila deseada
+    for (int i = 0; i < row; i++) {
+        current = current.south;
+    }
+    // Moverse a la derecha hasta la columna deseada
+    for (int j = 0; j < col; j++) {
+        current = current.east;
+    }
+    return current;
+}
 }//
