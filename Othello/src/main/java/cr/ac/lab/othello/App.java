@@ -70,7 +70,7 @@ public class App extends Application {
 
             // Ejecutar turno
             if (!othello.executeTurn(f, c)) {
-                System.out.println("Movimiento no permitido. ¡Intenta de nuevo!");
+                System.out.println("Movimiento no permitido. Intenta de nuevo!");
             }
         }
 

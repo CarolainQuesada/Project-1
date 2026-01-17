@@ -69,31 +69,49 @@ public class Board {
         previousRowStart = currentRowStart;
     }   
    }
-public void printBoard() {
-    Node rowNode = start; // Asegúrate de que 'start' no sea null
+   public void printBoard() {
 
+    // ===== Imprimir encabezado de columnas =====
+    System.out.print("    ");
+    for (int c = 0; c < columns; c++) {
+        System.out.print(c + "   ");
+    }
+    System.out.println();
+
+    System.out.print("  ");
+    for (int i = 0; i < columns * 4 + 1; i++) {
+        System.out.print("-");
+    }
+    System.out.println();
+
+    Node rowNode = start;
+    int rowIndex = 0;
+
+    // ===== Imprimir filas =====
     while (rowNode != null) {
-        Node current = rowNode;
 
+        // Número de fila a la izquierda
+        System.out.print(rowIndex + " | ");
+
+        Node current = rowNode;
         while (current != null) {
-            // Verificamos si hay una pieza antes de pedir su color
+
             if (current.getPiece() == null) {
                 System.out.print("[ ] ");
             } else {
                 char color = current.getPiece().getColor();
-                if (color == 'B') {
-                    System.out.print("[B] ");
-                } else {
-                    System.out.print("[N] ");
-                }
+                System.out.print("[" + color + "] ");
             }
-            current = current.east; // Avanzar a la derecha
+
+            current = current.east;
         }
 
-        System.out.println(); // Salto de línea al terminar la fila
-        rowNode = rowNode.south; // Avanzar a la fila de abajo
+        System.out.println();
+        rowNode = rowNode.south;
+        rowIndex++;
     }
 }
+
     
     public Node getStart() {
     return start;
