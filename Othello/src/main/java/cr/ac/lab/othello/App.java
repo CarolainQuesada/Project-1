@@ -6,14 +6,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.Board;
-import model.Node;
-import model.Piece; // solo si ya existe
-
+import java.util.Scanner;
 import java.io.IOException;
+import model.Game;
+import model.Player;
 
-/**
- * JavaFX App
- */
 public class App extends Application {
 
     private static Scene scene;
@@ -35,36 +32,52 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-   
+        // 1. Inicializar el Tablero (8x8)
+        Board board = new Board(8, 8);
 
+        // 2. Crear los Jugadores (Negras 'N' son X, Blancas 'B' son O)
+        // Usamos los colores internos 'N' y 'B' para que la lógica de Game funcione,
+        // pero en el printBoard se verán como X y O.
+        Player p1 = new Player("Jugador 1", 'N'); 
+        Player p2 = new Player("Jugador 2", 'B');
 
+        // 3. Inicializar el Juego
+        Game othello = new Game(board, p1, p2);
+        Scanner sc = new Scanner(System.in);
 
+        System.out.println("--- Inicio del Juego de Othello ---");
 
-        // Crear un tablero 5x5
-        Board board = new Board(5, 5);
+        // Ciclo principal protegido
+        while (!othello.isGameOver()) {
+            board.printBoard();
+            System.out.println("Turno de: " + othello.getCurrentPlayer().getName());
+            System.out.print("Ingrese fila y columna (o una letra para salir): ");
 
-        // Imprimir tablero vacío
-        System.out.println("Tablero vacío:");
+            // PROTECCIÓN: Verifica si la entrada es un número
+            if (!sc.hasNextInt()) {
+                System.out.println("Entrada no válida. Por favor use números.");
+                sc.next(); // Limpia la entrada incorrecta (la letra)
+                continue;  // Regresa al inicio del while
+            }
+            int f = sc.nextInt();
+
+            if (!sc.hasNextInt()) {
+                System.out.println("Falta la columna. Intente de nuevo.");
+                sc.next(); // Limpia la entrada
+                continue;
+            }
+            int c = sc.nextInt();
+
+            // Ejecutar turno
+            if (!othello.executeTurn(f, c)) {
+                System.out.println("Movimiento no permitido. ¡Intenta de nuevo!");
+            }
+        }
+
+        System.out.println("\n--- JUEGO TERMINADO ---");
         board.printBoard();
-
-        // Colocar piezas manualmente para probar
-        Node start = board.getStart();
-
-        // Colocar una pieza en (0,0)
-        start.setPiece(new Piece('c'));
-
-        // Moverse a (0,2)
-        Node node02 = board.getNode(0, 2);
-        node02.setPiece(new Piece('c'));
-
-        // Moverse a (2,3)
-       Node node23 = board.getNode(2, 3); 
- 
-        // 2. Le pones la pieza al nodo guardado
-       node23.setPiece(new Piece('V'));
-
-        // Imprimir tablero con piezas
-        System.out.println("\nTablero con piezas:");
-        board.printBoard();
+        
+         // El launch se deja comentado por si se usa consola
+        // launch(args);
     }
 }
