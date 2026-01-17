@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 /**
@@ -72,26 +68,70 @@ public class Board {
         previousRowStart = currentRowStart;
     }   
    }
-    public void printBoard() {
+  public void printBoard() {
+    // 1. Encabezado de LETRAS (arriba)
+    System.out.println("\n      A   B   C   D   E   F   G   H");
+    System.out.print("    ");
+    for (int i = 0; i < 8 * 4 + 1; i++) System.out.print("-");
+    System.out.println();
+
     Node rowNode = start;
+    int displayRow = 1; // El usuario verá del 1 al 8
 
+    // 2. Cuerpo del tablero con NÚMEROS a la izquierda
     while (rowNode != null) {
-        Node current = rowNode;
+        System.out.print(displayRow + " | "); // Número de fila (1-8)
 
+        Node current = rowNode;
         while (current != null) {
             if (current.isEmpty()) {
-                System.out.print("[ ] ");
+                System.out.print(".   ");
             } else {
-                System.out.print("[X] ");
+                char simbolo = (current.getPiece().getColor() == 'N') ? 'X' : 'O';
+                System.out.print(simbolo + "   ");
             }
             current = current.east;
         }
 
-        System.out.println();
+        System.out.println("|");
         rowNode = rowNode.south;
+        displayRow++;
     }
+
+    System.out.print("    ");
+    for (int i = 0; i < 8 * 4 + 1; i++) System.out.print("-");
+    System.out.println();
 }
+
+    
     public Node getStart() {
     return start;
+}
+    
+    public boolean isValidPosition(int row, int col) {
+    return row >= 0 && row < rows &&
+           col >= 0 && col < columns;
+}
+   //  If the position is outside the board limits, the method returns null.
+
+    public Node getNode(int row, int col) {
+
+    if (!isValidPosition(row, col)) {
+        return null;
+    }
+
+    Node current = start;
+
+    for (int i = 0; i < row; i++) {
+        if (current == null) return null;
+        current = current.south;
+    }
+
+    for (int j = 0; j < col; j++) {
+        if (current == null) return null;
+        current = current.east;
+    }
+
+    return current;
 }
 }//
