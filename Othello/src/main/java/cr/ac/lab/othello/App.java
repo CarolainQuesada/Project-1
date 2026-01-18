@@ -84,13 +84,13 @@ public class App extends Application {
                 continue;
             }
 
-            // Ejecutar jugada (La lógica interna sigue intacta)
+            // Ejecutar jugada 
             if (!othello.executeTurn(f, c)) {
-                System.out.println("--- [!] Movimiento ilegal. No captura piezas ---");
+                System.out.println("--- Movimiento ilegal. No captura piezas ---");
             }
 
         } catch (NumberFormatException e) {
-            System.out.println("--- [!] Error: Formato incorrecto. Use: Numero Letra (ej: 1 A) ---");
+            System.out.println("--- Error: Formato incorrecto. Use: Numero Letra (ej: 1 A) ---");
         }
     }
     
