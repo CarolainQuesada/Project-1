@@ -73,10 +73,10 @@ public class App extends Application {
     private static void iniciarPartida() {
 
         System.out.println("\n-----------------------------------------");
-        System.out.print("Nombre Jugador 1 (Negras - X): ");
+        System.out.print("Nombre Jugador 1 (Negras - N): ");
         String n1 = sc.next();
 
-        System.out.print("Nombre Jugador 2 (Blancas - O): ");
+        System.out.print("Nombre Jugador 2 (Blancas - B): ");
         String n2 = sc.next();
 
         // Create game components

@@ -45,7 +45,7 @@ public class BoardView {
                 if (current.isEmpty()) {
                     System.out.print("[ ]  ");
                 } else {
-                    char symbol = (current.getPiece().getColor() == 'N') ? 'X' : 'O';
+                    char symbol = (current.getPiece().getColor() == 'N') ? 'N' : 'B';
                     System.out.print("[" + symbol + "]  ");
                 }
 
