@@ -4,8 +4,18 @@
 - Carolain Quesada Soto  
 - Mathew Ramirez Gomez  
 - Alen Cedeno Miranda
-
-- This project implements the board game Reversi (Othello). The main objective is to model the game board using linked data structures, avoiding the use of traditional two-dimensional arrays, and applying controlled traversals and structural reasoning.
+  
+**Project Description**
+- This project implements the classic board game *Reversi (Othello)* using Java.
+The main objective is to model the game board through *linked data structures*, avoiding the use of traditional two-dimensional arrays.
+The solution emphasizes controlled traversal, directional validation, and structural reasoning, following the concepts studied in Data Structures.
+  
+- **Data Structure Used**
+- This project uses a fully linked board structure based on nodes.
+Each board cell is represented by a Node object, which maintains
+references to its eight neighboring nodes (north, south, east, west,
+and diagonals). This design avoids the use of two-dimensional arrays
+and allows controlled traversal in all directions.
 
 - **Code Organization**
 - **Packages and responsibilities**
