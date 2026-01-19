@@ -36,10 +36,22 @@ Includes functionality to flip the piece during captures.
 - Player: represents a player in the game.
 Stores the player’s name and the color of the pieces assigned.
 
--Game: controls the game logic, including turn management, move validation, directional traversal, capture execution, player switching, game termination detection, and final result calculation.
+- Game: controls the game logic, including turn management, move validation, directional traversal, capture execution, player switching, game termination detection, and final result calculation.
 
 - BoardView: provides a console-based visualization of the board, displaying rows, columns, and piece symbols during gameplay.
 
+- **Execution Flow**
+- The application starts from the App class.
+- The board is created and all nodes are linked in eight directions.
+- The initial four pieces are placed at the center of the board.
+- Players take turns placing pieces.
+- Each move is validated by traversing linked nodes in all directions.
+- Captured opponent pieces are flipped automatically.
+- Turns change after the player places a piece on a valid space.
+- The game ends when neither player has any valid moves or the board is full.
+- The winner is determined by who has more pieces on the board.
+- The game ends in a draw if both players have the same number of pieces.
 
+  
 
 
