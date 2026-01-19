@@ -87,18 +87,23 @@ Stores the player’s name and the color of the pieces assigned.
 - **Execution Evidence**
   
 - Game Home and Menu
-- <img width="1013" height="714" alt="image" src="https://github.com/user-attachments/assets/07117643-6b13-4485-b3c8-618cb4ac9ca3" />
-- Valid Moves
-- <img width="671" height="525" alt="image" src="https://github.com/user-attachments/assets/957b7f7a-539a-4942-a8be-6ad28a343e0e" />
-<img width="671" height="535" alt="image" src="https://github.com/user-attachments/assets/3a681da2-3f5c-4b2c-a7bb-f448347eaacf" />
-<img width="683" height="582" alt="image" src="https://github.com/user-attachments/assets/166e0818-1b5a-4353-8bad-a5b39eebe5f4" />
-<img width="677" height="622" alt="image" src="https://github.com/user-attachments/assets/b54e8c15-8737-47eb-ab3f-3ee7be48ff1b" />
--Invalid moves and imput errors:
-<img width="970" height="763" alt="image" src="https://github.com/user-attachments/assets/4eac237c-2f10-4492-b66f-7a8dddf4b1ca" />
--End of Game and Determine Winner
-<img width="922" height="872" alt="image" src="https://github.com/user-attachments/assets/bc483c8b-94b3-44c6-b223-802edd633753" />
-
-
   
+  <img width="1013" height="714" alt="image" src="https://github.com/user-attachments/assets/07117643-6b13-4485-b3c8-618cb4ac9ca3" />
+  
+- Valid Moves
+  
+<img width="671" height="525" alt="image" src="https://github.com/user-attachments/assets/957b7f7a-539a-4942-a8be-6ad28a343e0e" />
 
+<img width="671" height="535" alt="image" src="https://github.com/user-attachments/assets/3a681da2-3f5c-4b2c-a7bb-f448347eaacf" />
 
+<img width="683" height="582" alt="image" src="https://github.com/user-attachments/assets/166e0818-1b5a-4353-8bad-a5b39eebe5f4" />
+
+<img width="677" height="622" alt="image" src="https://github.com/user-attachments/assets/b54e8c15-8737-47eb-ab3f-3ee7be48ff1b" />
+
+-Invalid moves and imput errors:
+
+<img width="970" height="763" alt="image" src="https://github.com/user-attachments/assets/4eac237c-2f10-4492-b66f-7a8dddf4b1ca" />
+
+-End of Game and Determine Winner
+
+<img width="922" height="872" alt="image" src="https://github.com/user-attachments/assets/bc483c8b-94b3-44c6-b223-802edd633753" />
