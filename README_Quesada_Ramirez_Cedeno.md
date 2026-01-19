@@ -47,16 +47,7 @@ This structure follows a clear separation of responsibilities, similar to the MV
 - model: data representation and linked board structure (Board, Node, Piece, Player).
 - view: console-based visualization of the board (BoardView.java).
 
-- **Main Files**
-- App.java
-- Game.java
-- Board.java
-- Node.java
-- Piece.java
-- Player.java
-- BoardView.java
--
-- **Class Description**
+**Main Classes Description**
 - Board: represents the game board as a network of interconnected nodes.
 It builds and links all nodes horizontally, vertically, and diagonally, and provides access to board positions using logical row and column traversal.
 
