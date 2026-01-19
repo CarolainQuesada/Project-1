@@ -23,7 +23,24 @@ Each board cell is represented by a Node object that maintains references to its
 * Southeast
 * Southwest
 
-- **Code Organization**
+**Code Organization**
+**Project Structure**
+src/main/java
+├── controller
+│   └── Game.java            # Game logic and turn control
+├── cr.ac.lab.othello
+│   └── App.java             # Application entry point
+├── model
+│   ├── Board.java           # Board representation using linked nodes
+│   ├── Node.java            # Linked node structure with 8 directional references
+│   ├── Piece.java           # Game piece logic (black / white)
+│   └── Player.java          # Player attributes and piece color
+├── view
+│   └── BoardView.java       # Console-based board visualization
+└── module-info.java         # Java module system configuration
+
+This structure follows a clear separation of responsibilities, similar to the MVC (Model–View–Controller) pattern.
+
 - **Packages and responsibilities**
 - cr.ac.lab.othello: application entry point (App.java).
 - controller: game logic and rule control (Game.java).
