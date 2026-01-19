@@ -10,12 +10,18 @@
 The main objective is to model the game board through *linked data structures*, avoiding the use of traditional two-dimensional arrays.
 The solution emphasizes controlled traversal, directional validation, and structural reasoning, following the concepts studied in Data Structures.
   
-- **Data Structure Used**
-- This project uses a fully linked board structure based on nodes.
-Each board cell is represented by a Node object, which maintains
-references to its eight neighboring nodes (north, south, east, west,
-and diagonals). This design avoids the use of two-dimensional arrays
-and allows controlled traversal in all directions.
+**Data Structure Used**
+The game board is implemented as a fully linked structure of nodes.
+Each board cell is represented by a Node object that maintains references to its eight neighboring nodes:
+
+* North
+* South
+* East
+* West
+* Northeast
+* Northwest
+* Southeast
+* Southwest
 
 - **Code Organization**
 - **Packages and responsibilities**
