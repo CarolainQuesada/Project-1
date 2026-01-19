@@ -22,5 +22,24 @@
 - Piece.java
 - Player.java
 - BoardView.java
+-
+- **Class Description**
+- Board: represents the game board as a network of interconnected nodes.
+It builds and links all nodes horizontally, vertically, and diagonally, and provides access to board positions using logical row and column traversal.
 
-- 
+- Node: It represents a single cell on the board.
+It stores its logical position, the piece placed on it, and references to its eight neighboring nodes, constructed with the compass rose.
+
+-Piece: represents a game piece with a specific color (black or white).
+Includes functionality to flip the piece during captures.
+
+- Player: represents a player in the game.
+Stores the player’s name and the color of the pieces assigned.
+
+-Game: controls the game logic, including turn management, move validation, directional traversal, capture execution, player switching, game termination detection, and final result calculation.
+
+-BoardView: provides a console-based visualization of the board, displaying rows, columns, and piece symbols during gameplay.
+
+
+
+
