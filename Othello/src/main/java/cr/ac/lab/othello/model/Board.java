@@ -35,6 +35,15 @@ public class Board {
      * Builds the board by creating and linking all nodes.
      * Nodes are connected horizontally, vertically, and diagonally.
      */
+    /**
+ * behavior and complexity buildBoard():
+ * Main Behavior: Weaves the network: Creates each node and manually connects its 8 pointers (N, S, E, W, and diagonals).
+
+Time Complexity: O(R x C) or O(N^2)
+
+Space Complexity: O(R x C) or O(N^2)
+ * @author alenc
+ */
     private void buildBoard() {
 
         /** Reference to the first node of the previous row */
@@ -130,6 +139,16 @@ public class Board {
      * @param row Row index
      * @param col Column index
      * @return Node at the given position or null if invalid
+     */
+    /**
+     * behavior and complexity getNode()
+     * Behavior: Sequential navigation: Walk from the start, moving down rows and across columns until reaching the destination.
+
+Time Complexity: O(R + C) or O(N^2)
+Space Complexity: O(1)
+     * @param row
+     * @param col
+     * @return 
      */
     public Node getNode(int row, int col) {
 
