@@ -12,7 +12,9 @@ import cr.ac.lab.othello.model.Node;
  * This class is responsible only for displaying the board state,
  * including row numbers and column letters.
  * 
+ * @author Mathew Ramirez
  * @author Carolain Quesada
+ * @author Alen Cedeño
  */
 public class BoardView {
 

@@ -4,7 +4,9 @@ package cr.ac.lab.othello.model;
  * Represents a player in the Othello game.
  * Each player has a name and a piece color.
  *
+ * @author Mathew Ramirez
  * @author Carolain Quesada
+ * @author Alen Cedeño
  */
 public class Player {
 
