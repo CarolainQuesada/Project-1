@@ -4,7 +4,9 @@ package cr.ac.lab.othello.model;
  * Represents a game piece on the board.
  * Each piece belongs to a player and is identified by its color.
  *
+ * @author Mathew Ramirez
  * @author Carolain Quesada
+ * @author Alen Cedeño
  */
 public class Piece {
 

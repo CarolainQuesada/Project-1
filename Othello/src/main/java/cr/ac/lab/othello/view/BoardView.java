@@ -25,18 +25,6 @@ public class BoardView {
      *
      * @param board The board to be displayed
      */
-    
-    /**
-     * behavior and complexity printBoard():
-     * Main Behavior: Grid traversal: Jumps from node to node using east and 
-     * south to draw the board in the console.
-
-     Time Complexity O(R x C) or O(N^2)
-
-   Space Complexity O(1)
-    
-     
-     */
     public void printBoard(Board board) {
 
         // Print column headers (A–H)
@@ -80,4 +68,15 @@ public class BoardView {
         }
         System.out.println();
     }
+     /**
+     * behavior and complexity printBoard():
+     * Main Behavior: Grid traversal: Jumps from node to node using east and 
+     * south to draw the board in the console.
+
+     Time Complexity O(R x C) or O(N^2)
+
+     Space Complexity O(1)
+    
+     
+     */
 }

@@ -5,7 +5,9 @@ package cr.ac.lab.othello.model;
  * Each node stores its position, the piece placed on it,
  * and references to its neighboring nodes in all directions.
  *
+ * @author Mathew Ramirez
  * @author Carolain Quesada
+ * @author Alen Cedeño
  */
 public class Node {
 
