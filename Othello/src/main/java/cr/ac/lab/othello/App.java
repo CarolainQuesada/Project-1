@@ -2,11 +2,11 @@ package cr.ac.lab.othello;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import model.Board;
-import controller.Game;
-import model.Player;
+import cr.ac.lab.othello.model.Board;
+import cr.ac.lab.othello.controller.Game;
+import cr.ac.lab.othello.model.Player;
 import java.util.Scanner;
-import view.BoardView;
+import cr.ac.lab.othello.view.BoardView;
 
 /**
  * Entry point of the Othello application.
