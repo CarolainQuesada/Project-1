@@ -29,6 +29,7 @@ public class App extends Application {
      *
      * @param stage Primary stage
      */
+     
     @Override
     public void start(Stage stage) {
         /* JavaFX entry point (not used) */
@@ -55,7 +56,7 @@ public class App extends Application {
             menuOpcon = sc.next();
 
             if (menuOpcon.equalsIgnoreCase("j")) {
-                iniciarPartida();
+                startGame();
             } else if (!menuOpcon.equalsIgnoreCase("s")) {
                 System.out.println("\n--- [!] Opcion invalida ---");
             }
@@ -70,7 +71,19 @@ public class App extends Application {
      * Handles player creation, board initialization, turn execution,
      * move validation, and final result display.
      */
-    private static void iniciarPartida() {
+     /**
+       * 
+       * 
+       *   behavior and complexity startGame():
+       *  Behavior: Life cycle (Game Loop): Manages user input,
+       * updates the view, and repeats until the game ends.
+
+       Time Complexity: O(T X N)
+
+       Space Complexity: O(1)
+       * @param stage 
+       */
+    private static void startGame() {
 
         System.out.println("\n-----------------------------------------");
         System.out.print("Nombre Jugador 1 (Negras - N): ");
