@@ -16,7 +16,9 @@ import cr.ac.lab.othello.view.BoardView;
  * JavaFX is included only as a requirement, but the game is executed
  * entirely through the console.
  *
+ * @author Mathew Ramirez
  * @author Carolain Quesada
+ * @author Alen Cedeño
  */
 public class App extends Application {
 

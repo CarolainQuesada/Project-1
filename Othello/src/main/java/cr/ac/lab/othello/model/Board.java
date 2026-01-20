@@ -5,7 +5,9 @@ package cr.ac.lab.othello.model;
  * The board is implemented as a grid of interconnected nodes,
  * where each node keeps references to its neighbors in all directions.
  *
+ * @author Mathew Ramirez
  * @author Carolain Quesada
+ * @author Alen Cedeño
  */
 public class Board {
 

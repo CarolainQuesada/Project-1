@@ -10,7 +10,9 @@ import cr.ac.lab.othello.model.Player;
  * This class manages turns, move validation, captures,
  * player switching, and game termination conditions.
  *
+ * @author Mathew Ramirez
  * @author Carolain Quesada
+ * @author Alen Cedeño
  */
 public class Game {
 
