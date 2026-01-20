@@ -97,6 +97,21 @@ public class Game {
      * @param col Column index
      * @return true if the move was successful, false otherwise
      */
+    /*
+    behavior and complexity exuteTurn():
+    
+    behavior and complexity exuteTurn():
+    Behavior: Game logic: Validates the move,
+    searches for captures in 8 directions, and
+    changes the player's turn.
+
+Time Complexity: O(1)*
+
+Space Complexity: O(1)
+    
+    */
+    
+   
     public boolean executeTurn(int row, int col) {
         return makeMove(row, col);
     }
