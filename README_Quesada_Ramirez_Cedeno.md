@@ -25,19 +25,27 @@ Each board cell is represented by a Node object that maintains references to its
 
 **Code Organization**
 **Project Structure**
-src/main/java
-├── controller
-│   └── Game.java            # Game logic and turn control
-├── cr.ac.lab.othello
-│   └── App.java             # Application entry point
-├── model
-│   ├── Board.java           # Board representation using linked nodes
-│   ├── Node.java            # Linked node structure with 8 directional references
-│   ├── Piece.java           # Game piece logic (black / white)
-│   └── Player.java          # Player attributes and piece color
-├── view
-│   └── BoardView.java       # Console-based board visualization
-└── module-info.java         # Java module system configuration
+├── Source Packages
+│   ├── <default package>
+│   │   └── module-info.java
+│   ├── cr.ac.lab.othello
+│   │   └── App.java
+│   ├── cr.ac.lab.othello.controller
+│   │   └── Game.java
+│   └── cr.ac.lab.othello.model
+│       ├── Board.java
+│       ├── Node.java
+│       ├── Piece.java
+│       └── Player.java
+├── cr.ac.lab.othello.view
+│   └── BoardView.java
+├── Test Packages
+├── Dependencies
+├── Java Dependencies
+│   └── JDK 21 (Default)
+└── Project Files
+    ├── pom.xml
+    └── nbactions.xml
 
 This structure follows a clear separation of responsibilities, similar to the MVC (Model–View–Controller) pattern.
 
@@ -84,8 +92,14 @@ Stores the player’s name and the color of the pieces assigned.
 - 9. The winner is determined by who has more pieces on the board.
 - 10. The game ends in a draw if both players have the same number of pieces.
 
-- **Execution Evidence**
-  
+      
+- **Execution Flow**
+
+- **Installation**
+ 1. Clone the repository:
+ 2. Build the project
+3. using Maven execute the project 
+
 - Game Home and Menu
   
   <img width="1013" height="714" alt="image" src="https://github.com/user-attachments/assets/07117643-6b13-4485-b3c8-618cb4ac9ca3" />
